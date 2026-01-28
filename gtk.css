@@ -1,7 +1,19 @@
-/**
- * Aether Theme with Sharp Corners (Hyprland-inspired)
- * GTK4/Adwaita Custom Styling
- */
+/*
+*      dMMMMMP dMP dMP dMMMMMP dMMMMb dMMMMMMP            
+*     dMP     dMP dMP dMP     dMP dMP   dMP               
+*    dMMMP   dMP dMP dMMMP   dMP dMP   dMP                
+*   dMP      YMvAP" dMP     dMP dMP   dMP                 
+*  dMMMMMP    VP"  dMMMMMP dMP dMP   dMP                  
+*                                                         
+*      dMP dMP .aMMMb  dMMMMb  dMP dMMMMMP .aMMMb  dMMMMb 
+*     dMP dMP dMP"dMP dMP.dMP amr   .dMP" dMP"dMP dMP dMP 
+*    dMMMMMP dMP dMP dMMMMK" dMP  .dMP"  dMP dMP dMP dMP  
+*   dMP dMP dMP.aMP dMP"AMF dMP .dMP"   dMP.aMP dMP dMP   
+*  dMP dMP  VMMMP" dMP dMP dMP dMMMMMP  VMMMP" dMP dMP    
+*                                                         
+*
+* * GTK4/Adwaita Custom Styling
+*/
 
 /* Dynamic color palette from Aether */
 @define-color background #1c1e26;
@@ -177,8 +189,37 @@ toast button.circular.flat.image-button:hover {
     background-color: @red;
 }
 
+/* Emoji suggestion popover: remove layered borders */
+popover.emoji-picker,
+popover.emoji-picker > contents,
+popover.emoji-picker > contents > box {
+    border: none;
+    box-shadow: none;
+}
+
 /* Sharp corners, Hyprland-inspired */
 * {
     border-radius: 0;
 }
 
+/*
+* _______/\\\\\_______/\\\\\\____________/\\\__                                                  
+*   _____/\\\///\\\____\////\\\___________\/\\\__                                                 
+*    ___/\\\/__\///\\\_____\/\\\___________\/\\\__                                                
+*     __/\\\______\//\\\____\/\\\___________\/\\\__                                               
+*      _\/\\\_______\/\\\____\/\\\______/\\\\\\\\\__                                              
+*       _\//\\\______/\\\_____\/\\\_____/\\\////\\\__                                             
+*        __\///\\\__/\\\_______\/\\\____\/\\\__\/\\\__                                            
+*         ____\///\\\\\/______/\\\\\\\\\_\//\\\\\\\/\\_                                           
+*          ______\/////_______\/////////___\///////\//__                                          
+*  ______/\\\\\\\\\\\________________/\\\_______________________/\\\______________________        
+*   _____\/////\\\///________________\/\\\______________________\/\\\______________________       
+*    _________\/\\\___________________\/\\\______________________\/\\\______________________      
+*     _________\/\\\_________/\\\\\____\/\\\____________/\\\\\____\/\\\____________/\\\\\____     
+*      _________\/\\\_______/\\\///\\\__\/\\\\\\\\\____/\\\///\\\__\/\\\\\\\\\____/\\\///\\\__    
+*       _________\/\\\______/\\\__\//\\\_\/\\\////\\\__/\\\__\//\\\_\/\\\////\\\__/\\\__\//\\\_   
+*        __/\\\___\/\\\_____\//\\\__/\\\__\/\\\__\/\\\_\//\\\__/\\\__\/\\\__\/\\\_\//\\\__/\\\__  
+*         _\//\\\\\\\\\_______\///\\\\\/___\/\\\\\\\\\___\///\\\\\/___\/\\\\\\\\\___\///\\\\\/___ 
+*          __\/////////__________\/////_____\/////////______\/////_____\/////////______\/////_____
+*  
+*/

@@ -1,9 +1,13 @@
 @import "../omarchy/current/theme/waybar.css";
 
+@define-color pill_border_c1 #59e3e3;
+@define-color pill_border_c2 #26bbd9;
+@define-color pill_border_c3 #29d398;
+
 * {
     background-color: transparent;
     color: @foreground;
-    font-family: "JetBrainsMono Nerd Font Mono", "JetBrainsMono Nerd Font", monospace;
+    font-family: "JetBrainsMono Nerd Font Propo", "JetBrainsMono Nerd Font", monospace;
     font-size: 14px;
 }
 
@@ -11,30 +15,78 @@ window#waybar {
     background-color: transparent;
     border: none;
     border-radius: 0;
-}
-
-.modules-left,
-.modules-center,
-.modules-right {
-    background: @background;
-    border-radius: 20px;
-    margin: 0 8px;
-    padding: 0 12px;
+    padding: 0;
 }
 
 .modules-center {
-    padding: 0 15px;
-    border-bottom: 2px solid @accent;
+    background: @background;
+    border-radius: 999px;
+    border: 3px solid @accent;
+    box-shadow: 0 8px 20px alpha(@background, 0.6);
+    margin: 0;
+    padding: 4px 18px;
 }
 
+/* Right-side tray island */
 .modules-right {
-    padding-right: 0;
+    background: @background;
+    border-radius: 999px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 3px solid @accent;
+    border-right: none;
+    box-shadow: 0 8px 20px alpha(@background, 0.6);
+    margin: 0;
+    padding: 1px 0 1px 8px;
+    transition: padding 0.24s ease-in-out;
 }
 
-/* Remove the trailing gap when the last module has a right margin */
+.modules-right > widget > * {
+    margin: 0 4px;
+    padding: 0 4px;
+}
+
+.modules-right:hover {
+    padding: 4px 12px;
+}
+
 .modules-right > widget:last-child > * {
     margin-right: 0;
     padding-right: 0;
+}
+
+/* Left-side system island */
+.modules-left {
+    background: @background;
+    border-radius: 999px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 3px solid @accent;
+    border-left: none;
+    box-shadow: 0 8px 20px alpha(@background, 0.6);
+    margin: 0;
+    padding: 1px 8px 1px 0;
+    transition: padding 0.24s ease-in-out;
+}
+
+.modules-left > widget > * {
+    margin: 0 4px;
+    padding: 0 4px;
+}
+
+.modules-left > widget:first-child > * {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.modules-left:hover {
+    padding: 4px 12px;
+}
+
+/* Compact, uniform spacing inside the island */
+.modules-center > widget > * {
+    margin: 0 6px;
+    padding: 0 4px;
 }
 
 /* Module-only hover "grow" animation (avoid animating full bar sections) */
@@ -62,6 +114,7 @@ window#waybar {
     min-width: 9px;
     border-left: 1.5px solid @accent;
     border-radius: 20px;
+    border-left-color: @accent;
     transition:
         padding 0.28s ease-in-out,
         min-width 0.28s ease-in-out,
@@ -69,18 +122,31 @@ window#waybar {
         opacity 0.28s ease-in-out;
 }
 
+#workspaces {
+    margin-right: 0;
+    padding-right: 0;
+}
+
 #workspaces button.active {
     background-color: alpha(@accent, 0.16);
+    border-left-color: @accent;
 }
 
 #workspaces button.empty {
-    opacity: 0.5;
+    opacity: 1;
+    color: alpha(@foreground, 0.5);
+    border-left-color: @accent;
+}
+
+#workspaces button.empty * {
+    color: alpha(@foreground, 0.5);
 }
 
 #workspaces button:hover {
     background-color: alpha(@accent, 0.12);
     padding: 0 22px;
     min-width: 13px;
+    border-left-color: @accent;
 }
 
 window#waybar.empty #window {
@@ -95,50 +161,77 @@ window#waybar.empty #window {
 #custom-omarchy,
 #custom-screenrecording-indicator {
     min-width: 12px;
-    margin: 0 7.5px;
 }
 
 #custom-update {
-    margin-left: 8px;
-    margin-right: 0;
     font-size: 16px;
 }
 
 #custom-omarchy {
-    border-right: none;
-    padding-right: 2px;
     font-size: 16px;
-    margin: 0 12px;
+    margin-left: 0;
+}
+
+#clock {
+    border-left: 1.5px solid @accent;
+    border-radius: 20px;
+    padding-left: 12px;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 #tray {
-    margin-right: 0;
-    padding-right: 12px;
-    border-right: 1.5px solid @accent;
-    border-radius: 20px;
+    padding: 0 4px;
+    margin-left: 6px;
 }
 
-#bluetooth,
 #pulseaudio,
 #network,
 #memory {
-    margin-left: 8px;
-    margin-right: 0;
-    padding-left: 10px;
-    padding-right: 8px;
-    font-size: 14px;
-    border-right: 1.5px solid @accent;
-    border-radius: 20px;
+    font-size: 18px;
 }
 
 #bluetooth {
-    padding-left: 12px;
-    padding-right: 12px;
     font-size: 16px;
 }
 
 #custom-expand-icon {
-    margin-right: 18px;
+    margin-right: 10px;
+    margin-left: 2px;
+    transition:
+        padding 0.42s ease-in-out,
+        opacity 0.42s ease-in-out;
+}
+
+.system-group-item {
+    margin: 0 4px;
+    padding: 0 4px;
+}
+
+.system-group-item > * {
+    margin: 0 4px;
+    padding: 0 4px;
+}
+
+.modules-left #network,
+.modules-left #memory,
+.modules-left #bluetooth {
+    margin: 0 4px;
+    padding: 0 4px;
+}
+
+#custom-system-expand-icon {
+    margin-right: 4px;
+    margin-left: 10px;
+    transition:
+        padding 0.42s ease-in-out,
+        opacity 0.42s ease-in-out;
+}
+
+.tray-group-item {
+    margin: 0 4px;
+    padding: 0 4px;
 }
 
 tooltip {

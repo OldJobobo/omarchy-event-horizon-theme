@@ -3,3 +3,26 @@
 @define-color label #fadad1;
 @define-color image #fadad1;
 @define-color progress #fab795;
+
+/* Cancel out Omarchy settings */
+window:not(:backdrop),
+window:backdrop {
+    border: none;
+    border-width: 0;
+    border-radius: 24px;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 12px;
+}
+
+
+/* Draw a new background */
+window:not(:backdrop) #container,
+window:backdrop #container {
+    border: 2px solid @border-color;
+    border-radius: 16px;
+    background-color: alpha(@background-color, 0.8);
+    padding: 12px;
+    background-clip: padding-box;
+    box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.9);
+}
