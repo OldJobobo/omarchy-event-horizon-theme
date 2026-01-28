@@ -1,8 +1,21 @@
-/**
+/*
+*      dMMMMMP dMP dMP dMMMMMP dMMMMb dMMMMMMP            
+*     dMP     dMP dMP dMP     dMP dMP   dMP               
+*    dMMMP   dMP dMP dMMMP   dMP dMP   dMP                
+*   dMP      YMvAP" dMP     dMP dMP   dMP                 
+*  dMMMMMP    VP"  dMMMMMP dMP dMP   dMP                  
+*                                                         
+*      dMP dMP .aMMMb  dMMMMb  dMP dMMMMMP .aMMMb  dMMMMb 
+*     dMP dMP dMP"dMP dMP.dMP amr   .dMP" dMP"dMP dMP dMP 
+*    dMMMMMP dMP dMP dMMMMK" dMP  .dMP"  dMP dMP dMP dMP  
+*   dMP dMP dMP.aMP dMP"AMF dMP .dMP"   dMP.aMP dMP dMP   
+*  dMP dMP  VMMMP" dMP dMP dMP dMMMMMP  VMMMP" dMP dMP    
+*                                                         
+*
 * @name Event Horizon Discord (Clean)
 * @author @oldjobobo
 * @version 0.1.0
-* @description Minimal, stable Event Horizon theme for Vencord
+* @description Event Horizon theme for Vencord
 **/
 
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap");
@@ -459,3 +472,25 @@ div[class*="sidebar"] div[class*="scroller"] {
   --scrollbar-auto-track: color-mix(in srgb, var(--color13) 20%, transparent) !important;
   padding-bottom: calc(var(--custom-app-panels-height, 0px) + var(--eh-gap)) !important;
 }
+
+/*
+* _______/\\\\\_______/\\\\\\____________/\\\__                                                  
+*   _____/\\\///\\\____\////\\\___________\/\\\__                                                 
+*    ___/\\\/__\///\\\_____\/\\\___________\/\\\__                                                
+*     __/\\\______\//\\\____\/\\\___________\/\\\__                                               
+*      _\/\\\_______\/\\\____\/\\\______/\\\\\\\\\__                                              
+*       _\//\\\______/\\\_____\/\\\_____/\\\////\\\__                                             
+*        __\///\\\__/\\\_______\/\\\____\/\\\__\/\\\__                                            
+*         ____\///\\\\\/______/\\\\\\\\\_\//\\\\\\\/\\_                                           
+*          ______\/////_______\/////////___\///////\//__                                          
+*  ______/\\\\\\\\\\\________________/\\\_______________________/\\\______________________        
+*   _____\/////\\\///________________\/\\\______________________\/\\\______________________       
+*    _________\/\\\___________________\/\\\______________________\/\\\______________________      
+*     _________\/\\\_________/\\\\\____\/\\\____________/\\\\\____\/\\\____________/\\\\\____     
+*      _________\/\\\_______/\\\///\\\__\/\\\\\\\\\____/\\\///\\\__\/\\\\\\\\\____/\\\///\\\__    
+*       _________\/\\\______/\\\__\//\\\_\/\\\////\\\__/\\\__\//\\\_\/\\\////\\\__/\\\__\//\\\_   
+*        __/\\\___\/\\\_____\//\\\__/\\\__\/\\\__\/\\\_\//\\\__/\\\__\/\\\__\/\\\_\//\\\__/\\\__  
+*         _\//\\\\\\\\\_______\///\\\\\/___\/\\\\\\\\\___\///\\\\\/___\/\\\\\\\\\___\///\\\\\/___ 
+*          __\/////////__________\/////_____\/////////______\/////_____\/////////______\/////_____
+*  
+*/
