@@ -1,8 +1,28 @@
+/*
+*      dMMMMMP dMP dMP dMMMMMP dMMMMb dMMMMMMP            
+*     dMP     dMP dMP dMP     dMP dMP   dMP               
+*    dMMMP   dMP dMP dMMMP   dMP dMP   dMP                
+*   dMP      YMvAP" dMP     dMP dMP   dMP                 
+*  dMMMMMP    VP"  dMMMMMP dMP dMP   dMP                  
+*                                                         
+*      dMP dMP .aMMMb  dMMMMb  dMP dMMMMMP .aMMMb  dMMMMb 
+*     dMP dMP dMP"dMP dMP.dMP amr   .dMP" dMP"dMP dMP dMP 
+*    dMMMMMP dMP dMP dMMMMK" dMP  .dMP"  dMP dMP dMP dMP  
+*   dMP dMP dMP.aMP dMP"AMF dMP .dMP"   dMP.aMP dMP dMP   
+*  dMP dMP  VMMMP" dMP dMP dMP dMMMMMP  VMMMP" dMP dMP   
+*
+*
+*  Design inspired by 
+*     waybars by @N1R4 (https://github.com/nirabyte)
+*
+*
+*                                                         
+*/
+
+
 @import "../omarchy/current/theme/waybar.css";
 
-@define-color pill_border_c1 #59e3e3;
-@define-color pill_border_c2 #26bbd9;
-@define-color pill_border_c3 #29d398;
+@define-color alert @base01;
 
 * {
     background-color: transparent;
@@ -18,36 +38,45 @@ window#waybar {
     padding: 0;
 }
 
-.modules-center {
+/* Islands */
+.modules-left,
+.modules-center,
+.modules-right {
     background: @background;
-    border-radius: 999px;
     border: 3px solid @accent;
+    border-radius: 999px;
     box-shadow: 0 8px 20px alpha(@background, 0.6);
     margin: 0;
+}
+
+.modules-left {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}
+
+.modules-center {
     padding: 4px 18px;
 }
 
-/* Right-side tray island */
 .modules-right {
-    background: @background;
-    border-radius: 999px;
+    border-right: none;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    border: 3px solid @accent;
-    border-right: none;
-    box-shadow: 0 8px 20px alpha(@background, 0.6);
-    margin: 0;
     padding: 1px 0 1px 8px;
     transition: padding 0.24s ease-in-out;
 }
 
+.modules-right:hover {
+    padding: 4px 12px;
+}
+
+.modules-left > widget > *,
 .modules-right > widget > * {
     margin: 0 4px;
     padding: 0 4px;
-}
-
-.modules-right:hover {
-    padding: 4px 12px;
 }
 
 .modules-right > widget:last-child > * {
@@ -55,41 +84,45 @@ window#waybar {
     padding-right: 0;
 }
 
-/* Left-side system island */
-.modules-left {
-    background: @background;
-    border-radius: 999px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+.modules-center > widget > * {
+    margin: 0 6px;
+    padding: 0 4px;
+}
+
+.modules-left > widget:first-child > * {
+    background-color: @background;
     border: 3px solid @accent;
     border-left: none;
+    border-radius: 0 999px 999px 0;
     box-shadow: 0 8px 20px alpha(@background, 0.6);
     margin: 0;
     padding: 1px 8px 1px 0;
     transition: padding 0.24s ease-in-out;
 }
 
-.modules-left > widget > * {
+.modules-left > widget:first-child > *:hover {
+    padding: 4px 12px 4px 0;
+}
+
+.modules-left > widget:first-child > * > box > widget > * {
     margin: 0 4px;
     padding: 0 4px;
 }
 
-.modules-left > widget:first-child > * {
-    margin-left: 0;
-    padding-left: 0;
+.modules-left #mpris {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin: 0 4px;
+    padding: 0 52px 0 52px;
 }
 
-.modules-left:hover {
-    padding: 4px 12px;
+#mpris.playing,
+#mpris.playing label {
+    animation: mpris-sweep 8s linear infinite, mpris-pulse 2s ease-in-out infinite;
 }
 
-/* Compact, uniform spacing inside the island */
-.modules-center > widget > * {
-    margin: 0 6px;
-    padding: 0 4px;
-}
-
-/* Module-only hover "grow" animation (avoid animating full bar sections) */
+/* Module hover animation targets */
 #custom-omarchy,
 #workspaces button,
 #clock,
@@ -107,14 +140,19 @@ window#waybar {
         opacity 0.18s ease;
 }
 
+/* Workspaces */
+#workspaces {
+    margin-right: 0;
+    padding-right: 0;
+}
+
 #workspaces button {
     all: initial;
-    padding: 0 12px;
-    margin: 0;
-    min-width: 9px;
     border-left: 1.5px solid @accent;
     border-radius: 20px;
-    border-left-color: @accent;
+    margin: 0;
+    min-width: 9px;
+    padding: 0 12px;
     transition:
         padding 0.28s ease-in-out,
         min-width 0.28s ease-in-out,
@@ -122,20 +160,14 @@ window#waybar {
         opacity 0.28s ease-in-out;
 }
 
-#workspaces {
-    margin-right: 0;
-    padding-right: 0;
-}
-
 #workspaces button.active {
     background-color: alpha(@accent, 0.16);
-    border-left-color: @accent;
 }
 
 #workspaces button.empty {
-    opacity: 1;
     color: alpha(@foreground, 0.5);
     border-left-color: @accent;
+    opacity: 1;
 }
 
 #workspaces button.empty * {
@@ -144,46 +176,48 @@ window#waybar {
 
 #workspaces button:hover {
     background-color: alpha(@accent, 0.12);
-    padding: 0 22px;
-    min-width: 13px;
     border-left-color: @accent;
+    min-width: 13px;
+    padding: 0 22px;
 }
 
-window#waybar.empty #window {
-    opacity: 0;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    margin: 0;
-}
+/* Module sizing + spacing */
 #custom-update,
 #custom-omarchy,
 #custom-screenrecording-indicator {
-    min-width: 12px;
+    min-width: 10px;
 }
 
-#custom-update {
+#custom-update,
+#custom-omarchy {
     font-size: 16px;
 }
 
 #custom-omarchy {
-    font-size: 16px;
     margin-left: 0;
+    padding-left: 0;
 }
 
 #clock {
     border-left: 1.5px solid @accent;
     border-radius: 20px;
+    margin-left: 4px;
+    margin-right: 0;
     padding-left: 12px;
     padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 #tray {
-    padding: 0 4px;
     margin-left: 6px;
+    padding: 0 4px;
+}
+
+#mpris {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin: 0 6px;
+    padding: 0 4px;
 }
 
 #pulseaudio,
@@ -197,49 +231,49 @@ window#waybar.empty #window {
 }
 
 #custom-expand-icon {
-    margin-right: 10px;
     margin-left: 2px;
+    margin-right: 10px;
     transition:
         padding 0.42s ease-in-out,
         opacity 0.42s ease-in-out;
 }
 
-.system-group-item {
-    margin: 0 4px;
-    padding: 0 4px;
-}
-
-.system-group-item > * {
-    margin: 0 4px;
-    padding: 0 4px;
-}
-
+.system-group-item,
+.system-group-item > *,
 .modules-left #network,
 .modules-left #memory,
-.modules-left #bluetooth {
-    margin: 0 4px;
-    padding: 0 4px;
-}
-
-#custom-system-expand-icon {
-    margin-right: 4px;
-    margin-left: 10px;
-    transition:
-        padding 0.42s ease-in-out,
-        opacity 0.42s ease-in-out;
-}
-
+.modules-left #bluetooth,
 .tray-group-item {
     margin: 0 4px;
     padding: 0 4px;
 }
 
-tooltip {
+#custom-system-expand-icon {
+    margin-left: 2px;
+    margin-right: 10px;
+    padding-left: 6px;
+    transition:
+        padding 0.42s ease-in-out,
+        opacity 0.42s ease-in-out;
+}
+
+/* Window title when empty */
+window#waybar.empty #window {
+    background: transparent;
     border: none;
+    box-shadow: none;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+}
+
+/* Tooltip */
+tooltip {
+    background-color: @background;
+    border: none;
+    border-bottom: 2.5px solid @accent;
     border-left: 1px solid @accent;
     border-right: 1px solid @accent;
-    border-bottom: 2.5px solid @accent;
-    background-color: @background;
     border-radius: 20px;
     padding: 2px;
 }
@@ -248,19 +282,38 @@ tooltip {
     opacity: 0;
 }
 
+/* Recording indicator */
 #custom-screenrecording-indicator {
-    margin-right: 0;
-    margin-top: 0;
-    font-size: 16px;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
     animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 #custom-screenrecording-indicator.active {
-    color: @foreground;
-    animation-name: blink-recording;
     animation-duration: 0.7s;
+    animation-name: blink-recording;
+    color: @alert;
+}
+
+/* Center badges for update + recording */
+#custom-update,
+#custom-screenrecording-indicator {
+    background-color: alpha(@background, 0.7);
+    border: 1.5px solid alpha(@accent, 0.9);
+    border-radius: 999px;
+    box-shadow: 0 2px 8px alpha(@background, 0.6);
+    padding: 2px 8px;
+    margin-left: 6px;
+    margin-right: 0px;
+}
+
+#custom-screenrecording-indicator {
+    border: none;
+}
+
+#custom-screenrecording-indicator.active {
+    background-color: alpha(@alert, 0.15);
+    border-color: @alert;
 }
 
 @keyframes blink-recording {
@@ -268,3 +321,148 @@ tooltip {
         color: @background;
     }
 }
+
+/*
+@keyframes mpris-sweep {
+    0% {
+        text-shadow:
+            -60px 0 8px alpha(@base0A, 0.05),
+            -40px 0 8px alpha(@base0A, 0.85),
+            -20px 0 12px alpha(@base0B, 1.0),
+            0 0 8px alpha(@base0D, 0.85);
+    }
+    50% {
+        text-shadow:
+            -20px 0 12px alpha(@base0B, 1.0),
+            0 0 8px alpha(@base0D, 0.9),
+            20px 0 8px alpha(@base0A, 0.55),
+            -40px 0 8px alpha(@base0A, 0.55);
+    }
+    100% {
+        text-shadow:
+            -60px 0 8px alpha(@base0A, 0.05),
+            -40px 0 8px alpha(@base0A, 0.85),
+            -20px 0 12px alpha(@base0B, 1.0),
+            0 0 8px alpha(@base0D, 0.85);
+    }
+}
+*/
+
+
+
+@keyframes mpris-sweep {
+  from {
+    text-shadow:
+      -86px 0 6px alpha(@base0A, 0.05),
+      -80px  0 8px alpha(@base0A, 0.75),
+      -40px  0 9px alpha(@base0B, 1.0),
+        0px  0 8px alpha(@base0D, 0.85);
+  }
+
+  50% {
+    text-shadow:
+      -63px  0 9px alpha(@base0B, 1.0),
+       10px  0 8px alpha(@base0D, 0.95),
+       59px  0 7px alpha(@base0A, 0.65),
+      -58px  0 8px alpha(@base0A, 0.25);
+  }
+
+  to {
+    text-shadow:
+      -86px 0 8px alpha(@base0A, 0.05),
+      -80px  0 9px alpha(@base0A, 0.75),
+      -40px  0 10px alpha(@base0B, 1.0),
+        0px  0 7px alpha(@base0D, 0.85);
+  }
+}
+
+
+
+
+
+
+@keyframes mpris-pulse {
+    0% {
+        color: @base0A;
+    }
+    40% {
+        color: @base0B;
+    }
+    70% {
+        color: @base0D;
+    }
+    100% {
+        color: @base0A;
+    }
+}
+
+/* Module colors */
+#custom-omarchy {
+    color: @base0D;
+}
+
+#workspaces button {
+    color: @base0A;
+}
+
+#workspaces button.active {
+    color: @base0A;
+}
+
+#clock {
+    color: @base0A;
+}
+
+#custom-update {
+    color: @base0A;
+}
+
+#custom-screenrecording-indicator {
+    color: @base08;
+}
+
+#network {
+    color: @base05;
+}
+
+#memory {
+    color: @base02;
+}
+
+#battery {
+    color: @base0D;
+}
+
+#bluetooth {
+    color: @base0C;
+}
+
+#pulseaudio {
+    color: @base0B;
+}
+
+#tray {
+    color: @base03;
+}
+
+/*
+* _______/\\\\\_______/\\\\\\____________/\\\__                                                  
+*   _____/\\\///\\\____\////\\\___________\/\\\__                                                 
+*    ___/\\\/__\///\\\_____\/\\\___________\/\\\__                                                
+*     __/\\\______\//\\\____\/\\\___________\/\\\__                                               
+*      _\/\\\_______\/\\\____\/\\\______/\\\\\\\\\__                                              
+*       _\//\\\______/\\\_____\/\\\_____/\\\////\\\__                                             
+*        __\///\\\__/\\\_______\/\\\____\/\\\__\/\\\__                                            
+*         ____\///\\\\\/______/\\\\\\\\\_\//\\\\\\\/\\_                                           
+*          ______\/////_______\/////////___\///////\//__                                          
+*  ______/\\\\\\\\\\\________________/\\\_______________________/\\\______________________        
+*   _____\/////\\\///________________\/\\\______________________\/\\\______________________       
+*    _________\/\\\___________________\/\\\______________________\/\\\______________________      
+*     _________\/\\\_________/\\\\\____\/\\\____________/\\\\\____\/\\\____________/\\\\\____     
+*      _________\/\\\_______/\\\///\\\__\/\\\\\\\\\____/\\\///\\\__\/\\\\\\\\\____/\\\///\\\__    
+*       _________\/\\\______/\\\__\//\\\_\/\\\////\\\__/\\\__\//\\\_\/\\\////\\\__/\\\__\//\\\_   
+*        __/\\\___\/\\\_____\//\\\__/\\\__\/\\\__\/\\\_\//\\\__/\\\__\/\\\__\/\\\_\//\\\__/\\\__  
+*         _\//\\\\\\\\\_______\///\\\\\/___\/\\\\\\\\\___\///\\\\\/___\/\\\\\\\\\___\///\\\\\/___ 
+*          __\/////////__________\/////_____\/////////______\/////_____\/////////______\/////_____
+*  
+*/

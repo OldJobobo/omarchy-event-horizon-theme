@@ -1,7 +1,39 @@
+/*
+*      dMMMMMP dMP dMP dMMMMMP dMMMMb dMMMMMMP            
+*     dMP     dMP dMP dMP     dMP dMP   dMP               
+*    dMMMP   dMP dMP dMMMP   dMP dMP   dMP                
+*   dMP      YMvAP" dMP     dMP dMP   dMP                 
+*  dMMMMMP    VP"  dMMMMMP dMP dMP   dMP                  
+*                                                         
+*      dMP dMP .aMMMb  dMMMMb  dMP dMMMMMP .aMMMb  dMMMMb 
+*     dMP dMP dMP"dMP dMP.dMP amr   .dMP" dMP"dMP dMP dMP 
+*    dMMMMMP dMP dMP dMMMMK" dMP  .dMP"  dMP dMP dMP dMP  
+*   dMP dMP dMP.aMP dMP"AMF dMP .dMP"   dMP.aMP dMP dMP   
+*  dMP dMP  VMMMP" dMP dMP dMP dMMMMMP  VMMMP" dMP dMP    
+*                                                         
+*
+*/
+
 @define-color background #1c1e26;
 @define-color foreground #fadad1;
 @define-color accent #26bbd9;
 
+/* Base16 */
+@define-color base00 #1c1e26;
+@define-color base01 #e95678;
+@define-color base02 #29d398;
+@define-color base03 #fab795;
+@define-color base04 #26bbd9;
+@define-color base05 #ee64ac;
+@define-color base06 #59e3e3;
+@define-color base07 #fadad1;
+@define-color base08 #6c6f93;
+@define-color base09 #ec6a88;
+@define-color base0A #3fdaa4;
+@define-color base0B #fbc3a7;
+@define-color base0C #3fc4de;
+@define-color base0D #f075b5;
+@define-color base0E #6be4e6;
 /*
 * _______/\\\\\_______/\\\\\\____________/\\\__                                                  
 *   _____/\\\///\\\____\////\\\___________\/\\\__                                                 
@@ -23,4 +55,3 @@
 *          __\/////////__________\/////_____\/////////______\/////_____\/////////______\/////_____
 *  
 */
-
