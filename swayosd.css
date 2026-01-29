@@ -11,6 +11,7 @@
 *   dMP dMP dMP.aMP dMP"AMF dMP .dMP"   dMP.aMP dMP dMP   
 *  dMP dMP  VMMMP" dMP dMP dMP dMMMMMP  VMMMP" dMP dMP    
 *                                                         
+*
 */
 
 
@@ -25,22 +26,22 @@ window:not(:backdrop),
 window:backdrop {
     border: none;
     border-width: 0;
-    border-radius: 24px;
+    border-radius: 0px;
     background-color: transparent;
     box-shadow: none;
-    padding: 12px;
+    padding: 0px;
 }
 
 
 /* Draw a new background */
 window:not(:backdrop) #container,
 window:backdrop #container {
-    border: 2px solid @border-color;
+    border: 3px solid @border-color;
     border-radius: 16px;
-    background-color: alpha(@background-color, 0.8);
+    background-color: @background-color;
     padding: 12px;
     background-clip: padding-box;
-    box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.9);
+    box-shadow: 2px 2px 9px 0px rgba(0, 0, 0, 0.8);
 }
 
 /*
