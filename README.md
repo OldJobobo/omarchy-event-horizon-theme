@@ -34,9 +34,22 @@ omarchy-theme-install https://github.com/oldjobobo/omarchy-event-horizon-theme
     <td><img src="backgrounds/1217194.png" width="220" alt="1217194"></td>
   </tr>
   <tr>
+    <td><img src="backgrounds/1245932.jpg" width="220" alt="1245932"></td>
     <td><img src="backgrounds/1300373.jpg" width="220" alt="1300373"></td>
+    <td><img src="backgrounds/1315743.jpg" width="220" alt="1315743"></td>
+  </tr>
+  <tr>
+    <td><img src="backgrounds/1350765.jpeg" width="220" alt="1350765"></td>
+    <td><img src="backgrounds/1355287.jpeg" width="220" alt="1355287"></td>
     <td><img src="backgrounds/1381272.png" width="220" alt="1381272"></td>
+  </tr>
+  <tr>
+    <td><img src="backgrounds/1397272.png" width="220" alt="1397272"></td>
+    <td><img src="backgrounds/977792.jpg" width="220" alt="977792"></td>
     <td><img src="backgrounds/abstract-colorful-digital-art-uhdpaper.com-4K-4.1967.jpg" width="220" alt="abstract-colorful"></td>
+  </tr>
+  <tr>
+    <td><img src="backgrounds/astronaut-space-jellyfish-digital-art-4k-wallpaper-uhdpaper.com-539@5@e.jpg" width="220" alt="astronaut-jellyfish"></td>
   </tr>
 </table>
 
