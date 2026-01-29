@@ -67,4 +67,6 @@ omarchy-theme-install https://github.com/oldjobobo/omarchy-event-horizon-theme
 ## Attribution
 
 - Based on the [Horizon Dark](https://horizontheme.com/) color scheme
+- Animations by @N1R4 (https://github.com/nirabyte)
+- Waybar based on waybar config by @N1R4 (https://github.com/nirabyte)
 - Wallpapers sourced from various digital art collections
