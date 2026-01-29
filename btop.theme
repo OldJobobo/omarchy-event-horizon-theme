@@ -23,31 +23,31 @@ theme[main_fg]="#fadad1"
 theme[title]="#ee64ac"
 
 # Highlight color for keyboard shortcuts
-theme[hi_fg]="#59e3e3"
+theme[hi_fg]="#26bbd9"
 
 # Background color of selected item in processes box
 theme[selected_bg]="#6c6f93"
 
 # Foreground color of selected item in processes box
-theme[selected_fg]="#fadad1"
+theme[selected_fg]="#1c1e26"
 
 # Color of inactive/disabled text
 theme[inactive_fg]="#6c6f93"
 
 # Misc colors for processes box including mini cpu graphs, details memory graph and details status text
-theme[proc_misc]="#ee64ac"
+theme[proc_misc]="#fab795"
 
 # Box outline and divider line color
-theme[cpu_box]="#29d398"
+theme[cpu_box]="#26bbd9"
 theme[mem_box]="#29d398"
-theme[net_box]="#29d398"
-theme[proc_box]="#29d398"
+theme[net_box]="#59e3e3"
+theme[proc_box]="#ee64ac"
 theme[div_line]="#6c6f93"
 
 # Gradient for all meters and graphs
-theme[temp_start]="#59e3e3"
-theme[temp_mid]="#26bbd9"
-theme[temp_end]="#29d398"
+theme[temp_start]="#fab795"
+theme[temp_mid]="#e95678"
+theme[temp_end]="#ec6a88"
 
 
 theme[cpu_start]="#59e3e3"
@@ -56,33 +56,33 @@ theme[cpu_end]="#29d398"
 
 
 theme[free_start]="#26bbd9"
-theme[free_mid]="#fab795"
-theme[free_end]="#fab795"
+theme[free_mid]="#59e3e3"
+theme[free_end]="#6be4e6"
 
 
-theme[cached_start]="#fab795"
-theme[cached_mid]="#fab795"
-theme[cached_end]="#fab795"
+theme[cached_start]="#ee64ac"
+theme[cached_mid]="#f075b5"
+theme[cached_end]="#ec6a88"
 
 
-theme[available_start]="#59e3e3"
-theme[available_mid]="#59e3e3"
-theme[available_end]="#59e3e3"
+theme[available_start]="#29d398"
+theme[available_mid]="#3fdaa4"
+theme[available_end]="#26bbd9"
 
 
-theme[used_start]="#29d398"
-theme[used_mid]="#29d398"
-theme[used_end]="#29d398"
+theme[used_start]="#e95678"
+theme[used_mid]="#ec6a88"
+theme[used_end]="#ee64ac"
 
 
-theme[download_start]="#fab795"
-theme[download_mid]="#59e3e3"
-theme[download_end]="#26bbd9"
+theme[download_start]="#59e3e3"
+theme[download_mid]="#26bbd9"
+theme[download_end]="#29d398"
 
 
 theme[upload_start]="#fab795"
-theme[upload_mid]="#59e3e3"
-theme[upload_end]="#26bbd9"
+theme[upload_mid]="#ec6a88"
+theme[upload_end]="#ee64ac"
 
 #  
 #  _______/\\\\\_______/\\\\\\____________/\\\__                                                  
