@@ -14,11 +14,10 @@
 
 
 [window]
-opacity = 1.0
+opacity = 0.3
 
 [colors]
 transparent_background_colors = true
-background_opacity = 0.3
 
 [colors.primary]
 background = "#1c1e26"
