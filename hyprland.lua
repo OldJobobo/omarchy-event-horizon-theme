@@ -2,48 +2,50 @@
 -- Source: /home/oldjobobo/Projects/themes/omarchy-event-horizon-theme/hyprland.conf
 
 local activeBorderColor = {
-  colors = { "rgb(59e3e3)", "rgb(59e3e3)", "rgb(26bbd9)", "rgb(26bbd9)", "rgb(29d398)", "rgb(29d398)" },
+	colors = { "rgb(59e3e3)", "rgb(59e3e3)", "rgb(26bbd9)", "rgb(26bbd9)", "rgb(29d398)", "rgb(29d398)" },
 }
 local inactiveBorderColor = "rgba(59e3e355)"
 
 hl.config({
-  general = {
-    col = {
-      active_border = activeBorderColor,
-      inactive_border = inactiveBorderColor,
-    },
-    border_size = 3,
-    gaps_in = 6,
-    gaps_out = 12,
-  },
-  group = {
-    col = {
-      border_active = activeBorderColor,
-      border_inactive = inactiveBorderColor,
-    },
-  },
-  decoration = {
-    rounding = 12,
-    rounding_power = 2,
-    blur = {
-      enabled = true,
-      size = 3,
-      passes = 4,
-      noise = 0.06,
-      brightness = 0.45,
-      vibrancy = 0.2,
-      vibrancy_darkness = 0.8,
-    },
-    shadow = {
-      enabled = true,
-      scale = 2.0,
-      range = 24,
-      render_power = 4,
-    },
-  },
-  animations = {
-    enabled = true,
-  },
+	general = {
+		col = {
+			active_border = activeBorderColor,
+			inactive_border = inactiveBorderColor,
+		},
+		border_size = 3,
+		gaps_in = 6,
+		gaps_out = 12,
+	},
+	group = {
+		col = {
+			border_active = activeBorderColor,
+			border_inactive = inactiveBorderColor,
+		},
+	},
+	decoration = {
+		rounding = 12,
+		rounding_power = 2,
+		blur = {
+			enabled = true,
+			size = 3,
+			passes = 4,
+			noise = 0.02,
+			contrast = 0.85,
+			brightness = 0.4,
+			vibrancy = 0.08,
+			vibrancy_darkness = 0.78,
+			ignore_opacity = true,
+		},
+		shadow = {
+			enabled = true,
+			scale = 2.0,
+			range = 24,
+			render_power = 4,
+		},
+	},
+	animations = {
+		enabled = true,
+	},
 })
 
 hl.curve("smoothFlow", { type = "bezier", points = { { 0.25, 0.46 }, { 0.45, 0.94 } } })
@@ -52,48 +54,48 @@ hl.curve("appleSilk", { type = "bezier", points = { { 0.34, 1.56 }, { 0.64, 1 } 
 hl.curve("elasticPop", { type = "bezier", points = { { 0.175, 0.885 }, { 0.32, 1.275 } } })
 
 hl.animation({
-  leaf = "windows",
-  enabled = true,
-  speed = 2.0,
-  bezier = "smoothFlow",
-  style = "slide",
+	leaf = "windows",
+	enabled = true,
+	speed = 2.0,
+	bezier = "smoothFlow",
+	style = "slide",
 })
 hl.animation({
-  leaf = "windowsOut",
-  enabled = true,
-  speed = 2.0,
-  bezier = "smoothFlow",
-  style = "popin 80%",
+	leaf = "windowsOut",
+	enabled = true,
+	speed = 2.0,
+	bezier = "smoothFlow",
+	style = "popin 80%",
 })
 hl.animation({
-  leaf = "windowsIn",
-  enabled = true,
-  speed = 2.0,
-  bezier = "smoothFlow",
-  style = "slide",
+	leaf = "windowsIn",
+	enabled = true,
+	speed = 2.0,
+	bezier = "smoothFlow",
+	style = "slide",
 })
 hl.animation({
-  leaf = "border",
-  enabled = true,
-  speed = 2.5,
-  bezier = "smoothFlow",
+	leaf = "border",
+	enabled = true,
+	speed = 2.5,
+	bezier = "smoothFlow",
 })
 hl.animation({
-  leaf = "workspaces",
-  enabled = true,
-  speed = 2.2,
-  bezier = "smoothFlow",
-  style = "slidevert",
+	leaf = "workspaces",
+	enabled = true,
+	speed = 2.2,
+	bezier = "smoothFlow",
+	style = "slidevert",
 })
 hl.animation({
-  leaf = "fade",
-  enabled = true,
-  speed = 1.5,
-  bezier = "smoothFlow",
+	leaf = "fade",
+	enabled = true,
+	speed = 1.5,
+	bezier = "smoothFlow",
 })
 hl.animation({
-  leaf = "layers",
-  enabled = true,
-  speed = 2,
-  bezier = "elasticPop",
+	leaf = "layers",
+	enabled = true,
+	speed = 2,
+	bezier = "elasticPop",
 })
