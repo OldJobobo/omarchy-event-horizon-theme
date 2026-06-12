@@ -29,11 +29,13 @@ omarchy-theme-install https://github.com/oldjobobo/omarchy-event-horizon-theme
 
 | | | |
 | --- | --- | --- |
-| ![](backgrounds/0-warp-speed.png) | ![](backgrounds/1-ringwalk-astronaut.jpeg) | ![](backgrounds/2-event-horizon.jpg) |
-| ![](backgrounds/3-lost-in-nebula.png) | ![](backgrounds/4-orbit-drifter.jpg) | ![](backgrounds/5-black-hole-accretion.jpg) |
-| ![](backgrounds/6-neon-singularity.jpg) | ![](backgrounds/7-astronaut-anomaly.jpg) | ![](backgrounds/8-cosmic-fall.jpg) |
-| ![](backgrounds/9-jellyfish-astronaut.jpg) | ![](backgrounds/10-prism-shards.jpg) | ![](backgrounds/11-neon-visor.png) |
-| ![](backgrounds/12-purple-event-horizon.jpeg) | ![](backgrounds/13-galaxy-profile.png) |  |
+| ![](backgrounds/00-warp-speed.jpg) | ![](backgrounds/01-ringwalk-astronaut.jpeg) | ![](backgrounds/02-event-horizon.jpg) |
+| ![](backgrounds/03-lost-in-nebula.jpg) | ![](backgrounds/04-orbit-drifter.jpg) | ![](backgrounds/05-black-hole-accretion.jpg) |
+| ![](backgrounds/06-neon-singularity.jpg) | ![](backgrounds/07-astronaut-anomaly.jpg) | ![](backgrounds/08-cosmic-fall.jpg) |
+| ![](backgrounds/09-jellyfish-astronaut.jpg) | ![](backgrounds/10-prism-shards.jpg) | ![](backgrounds/11-neon-visor.jpg) |
+| ![](backgrounds/12-purple-event-horizon.jpeg) | ![](backgrounds/13-galaxy-profile.jpg) |  |
+
+Animated wallpapers: `14-astronaut-floating-in-space.mp4`, `15-black-hole-in-nebula.mp4`, `16-hyprspace.mp4`, `17-unknown-within.mp4`, `18-neon-light-trails.mp4`, `19-where-time-stands-still.mp4`.
 
 ## Requirements
 
