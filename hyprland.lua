@@ -31,9 +31,9 @@ hl.config({
 			passes = 4,
 			noise = 0.02,
 			contrast = 0.85,
-			brightness = 0.4,
-			vibrancy = 0.08,
-			vibrancy_darkness = 0.78,
+			brightness = 0.3,
+			vibrancy = 0.06,
+			vibrancy_darkness = 0.70,
 			ignore_opacity = true,
 		},
 		shadow = {
