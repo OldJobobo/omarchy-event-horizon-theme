@@ -1,0 +1,36 @@
+system: "base24"
+name: "Horizon Terminal Dark Extended"
+slug: "horizon-terminal-dark-extended"
+author: "Michaël Ball; Base24 extension by OldJobobo"
+variant: "dark"
+
+palette:
+  # --- horizon event-depth neutral ramp ---
+  base00: "#1C1E26" # Event Void      - default background
+  base01: "#232530" # Orbital Shadow   - lighter background
+  base02: "#2E303E" # Gravity Well     - selection background
+  base03: "#6F6F70" # Signal Ash       - comments / muted text
+  base04: "#9DA0A2" # Lunar Dust       - dark foreground
+  base05: "#CBCED0" # Starlight        - default foreground
+  base06: "#DCDFE4" # Ion Glow         - light foreground
+  base07: "#E3E6EE" # White Horizon    - brightest foreground
+
+  # --- terminal-spectrum accents ---
+  base08: "#E95678" # Flare Coral      - red / error
+  base09: "#FAB795" # Reentry Peach    - orange / warning
+  base0A: "#FAC29A" # Solar Sand       - yellow
+  base0B: "#29D398" # Aurora Green     - green
+  base0C: "#59E1E3" # Plasma Cyan      - cyan
+  base0D: "#26BBD9" # Event Blue       - blue
+  base0E: "#EE64AC" # Nebula Pink      - purple
+  base0F: "#F09383" # Meteor Rose      - brown / special
+
+  # --- base24 extension ---
+  base10: "#15171D" # Deep Orbit       - darker background
+  base11: "#0E0F13" # Singularity      - darkest background
+  base12: "#EC6A88" # Flare Bloom      - bright red
+  base13: "#FBC3A7" # Solar Flash      - bright orange / yellow
+  base14: "#3FDAA4" # Aurora Burst     - bright green
+  base15: "#6BE4E6" # Plasma Arc       - bright cyan
+  base16: "#3FC4DE" # Horizon Pulse    - bright blue
+  base17: "#F075B5" # Nebula Bloom     - bright purple

@@ -15,11 +15,11 @@
 */
 
 
-@define-color background-color #1c1e26;
-@define-color border-color #26bbd9;
-@define-color label #fadad1;
-@define-color image #fadad1;
-@define-color progress #fab795;
+@define-color background-color #1C1E26;
+@define-color border-color #26BBD9;
+@define-color label #CBCED0;
+@define-color image #CBCED0;
+@define-color progress #FAC29A;
 
 /* Cancel out Omarchy settings */
 window:not(:backdrop),

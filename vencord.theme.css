@@ -22,29 +22,29 @@
 
 :root {
   /* Horizon Dark palette */
-  --color00: #1c1e26;
-  --color01: #e95678;
-  --color02: #29d398;
-  --color03: #fab795;
-  --color04: #26bbd9;
-  --color05: #ee64ac;
-  --color06: #3fdaa4;
-  --color07: #fadad1;
-  --color08: #6c6f93;
-  --color09: #ec6a88;
-  --color10: #3fdaa4;
-  --color11: #fbc3a7;
-  --color12: #3fc4de;
-  --color13: #f075b5;
-  --color14: #3fdaa4;
-  --color15: #fadad1;
+  --color00: #1C1E26;
+  --color01: #E95678;
+  --color02: #29D398;
+  --color03: #FAC29A;
+  --color04: #26BBD9;
+  --color05: #EE64AC;
+  --color06: #59E1E3;
+  --color07: #CBCED0;
+  --color08: #6F6F70;
+  --color09: #EC6A88;
+  --color10: #3FDAA4;
+  --color11: #FBC3A7;
+  --color12: #3FC4DE;
+  --color13: #F075B5;
+  --color14: #6BE4E6;
+  --color15: #E3E6EE;
 
   /* UI surfaces */
   --eh-0: #16161c;
-  --eh-1: #1c1e26;
+  --eh-1: #1C1E26;
   --eh-2: #232530;
   --eh-3: #2e303e;
-  --eh-4: #6c6f93;
+  --eh-4: #6F6F70;
   --eh-border: color-mix(in srgb, var(--eh-4) 45%, transparent);
   --eh-gap: 12px;
 
@@ -146,7 +146,7 @@ body {
 
 /*--- Username Color ---*/
 [class*="username"] {
-  color: #59e3e3 !important;
+  color: #59E1E3 !important;
 }
 
 /*--- Channel Row Accents ---*/

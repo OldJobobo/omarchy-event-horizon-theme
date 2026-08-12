@@ -29,15 +29,15 @@ show_idle_bar_heads = 0
 waveform = 0
 
 [color]
-background = '#0b0f1a'
-foreground = '#3aa0ff'
+background = '#1C1E26'
+foreground = '#CBCED0'
 gradient = 1
-gradient_color_1 = '#3aa0ff'
-gradient_color_2 = '#7a6bff'
-gradient_color_3 = '#b06bff'
-gradient_color_4 = '#ff6bd6'
-gradient_color_5 = '#ff7a9c'
-gradient_color_6 = '#ffd166'
+gradient_color_1 = '#59E1E3'
+gradient_color_2 = '#26BBD9'
+gradient_color_3 = '#29D398'
+gradient_color_4 = '#EE64AC'
+gradient_color_5 = '#E95678'
+gradient_color_6 = '#FAC29A'
 
 [smoothing]
 monstercat = 0
